@@ -1050,7 +1050,7 @@ header, .start-btn, .nav-btn, .restart-btn, .bottom-back-btn {
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     try{
-        if (localStorage.getItem("WAY_access")==="ok") {
+        if (localStorage.getItem("WAY_access6")==="ok") {
             const ov=document.getElementById("pw-overlay");
             if(ov) ov.style.display="none";
             document.body.style.overflow="";
@@ -2145,7 +2145,7 @@ document.querySelectorAll('.note-popup').forEach(note => {
     if (!pw || pw.trim() === '') {
       return { ok: false, msg: 'يرجى إدخال الكود' };
     }
-    const url = 'https://mcq-app.github.io/WAY/password.xlsx';
+    const url = 'https://mcq-app.github.io/WAY/password6.xlsx';
     try {
       const resp = await fetch(url);
       if (!resp.ok) return { ok: false, msg: 'فشل تحميل ملف كلمات المرور.' };
@@ -2172,7 +2172,7 @@ document.querySelectorAll('.note-popup').forEach(note => {
       const res = await validatePassword(pw);
       if (res.ok) {
         // إخفاء المودال والسماح بالتفاعل مع الصفحة
-        localStorage.setItem('WAY_access','ok');
+        localStorage.setItem('WAY_access6','ok');
         overlay.style.display = 'none';
         document.body.style.overflow = '';
         // يمكنك هنا استدعاء دالة بدء تحميل الأسئلة إن أردت:
@@ -2248,7 +2248,7 @@ document.addEventListener('DOMContentLoaded', function(){
   }
   if(confirmBtn){
     confirmBtn.addEventListener('click', ()=>{
-      localStorage.removeItem('WAY_access');
+      localStorage.removeItem('WAY_access5');
       localStorage.removeItem('WAY_userCode');
       localStorage.removeItem('WAY_userName');
       modal.style.display='none';
